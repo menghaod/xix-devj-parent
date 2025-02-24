@@ -9,9 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xix</groupId>
-    <artifactId>pom</artifactId>
+    <artifactId>devj-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>单纯的pom依赖管理</description>
     <packaging>pom</packaging>
     <url/>
     <licenses>
@@ -36,13 +35,13 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-                <version>mybatis-plus.version</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <!-- 分页插件 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-jsqlparser</artifactId>
-                <version>mybatis-plus.version</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -51,12 +50,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
