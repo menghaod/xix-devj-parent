@@ -23,7 +23,7 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     @Override
     @NonNull
     public Object beforeBodyWrite(Object body, MethodParameter methodParameter, @NonNull MediaType mediaType, @NonNull Class<? extends HttpMessageConverter<?>> clazz, @NonNull ServerHttpRequest serverHttpRequest, @NonNull ServerHttpResponse serverHttpResponse) {
-        if (serverHttpRequest.getURI().getPath().startsWith("/xix/actuator")) {
+        if (serverHttpRequest.getURI().getPath().contains("/actuator")) {
             return body;
         }
         if (body instanceof String) {
